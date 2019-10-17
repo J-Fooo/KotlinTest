@@ -1,41 +1,48 @@
 package com.test.kotlin
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-    //val声明声明局部常量
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    //var变量声明
+    private lateinit var mTVBaseType: TextView
+    private lateinit var mTvGrammar: TextView
 
-    var name:String = "ddd"
-
-    private var intA: Int = 155
-    private var intB: Int? = intA
-    private var isSame: Boolean? = null
-    private var ddd: String? = null
+    private lateinit var mBtnD:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val tvMain = findViewById<TextView>(R.id.tv_main)
-        isSame = intA == intB
-        Log.e("Kotlin", "$isSame")
-        val isNum: Boolean
-        isNum = false
 
-        name.length
+        initView()
     }
 
-    private fun add(a: Int, b: Int): Int {
-        val test = Test()
-        val c = test.testIntA
-        return a + b + c
+    private fun initView() {
+//        mTvGrammar = findViewById<TextView>(R.id.tv_grammar)
+//        mTvGrammar = tv_grammar
+
+        mTvGrammar = tv_grammar
+        mTVBaseType = tv_base_type
+
+        mTvGrammar.setOnClickListener(this)
+        mTVBaseType.setOnClickListener(this)
     }
 
-    class Test {
-        var testIntA: Int = 20;
-        var testStrA: String = "kotlin"
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.tv_grammar -> {
+                val intent = Intent(this@MainActivity, GrammarActivity().javaClass)
+                startActivity(intent)
+            }
+
+            R.id.tv_base_type ->{
+
+            }
+        }
     }
+
 }

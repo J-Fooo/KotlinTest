@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GrammarActivity"
+    android:padding="10dp"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_var"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#43A047"
+        android:text="var声明变量"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_val"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_var"
+        app:layout_constraintTop_toBottomOf="@id/tv_var"
+        android:background="#43A047"
+        android:text="val声明变量"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_val"
+        app:layout_constraintTop_toBottomOf="@id/tv_val"
+        android:background="#43A047"
+        android:text="声明可空变量"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_lateinit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tv_null"
+        app:layout_constraintTop_toBottomOf="@id/tv_null"
+        android:background="#43A047"
+        android:text="成员变量延迟初始化"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:textStyle="bold"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
