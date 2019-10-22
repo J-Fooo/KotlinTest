@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.tv_base_type ->{
-
+                val intent = Intent(this@MainActivity,BaseTypeActivity().javaClass)
+                startActivity(intent)
             }
         }
     }

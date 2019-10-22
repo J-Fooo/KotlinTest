@@ -7,7 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_grammar.*
 //Top-Level,顶层属性与函数,作用范围是 pakeage
-const val NUM_B : String = "顶层声明"
+//const val NUM_B : String = "顶层声明"
 class GrammarActivity : AppCompatActivity(), View.OnClickListener {
     //1.3 后期初始化
     /*
@@ -71,12 +71,6 @@ class GrammarActivity : AppCompatActivity(), View.OnClickListener {
         //当某个变量的值可以为 null 的时候，必须在声明处的类型后添加 ? 来标识该引用可为空。
         var var_a : Int? = 0
         val val_a : Int? = null
-
-
-
-
-
-        // 2.基本数据类型
 
     }
 

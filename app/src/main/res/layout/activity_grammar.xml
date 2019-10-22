@@ -6,16 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GrammarActivity"
-    android:padding="10dp"
+    android:padding="15dp"
     >
-
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="变量，常量声明；可空变量声明；lateinit延迟变量的初始化；"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
 
     <TextView
         android:id="@+id/tv_var"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_explain"
+        app:layout_constraintTop_toBottomOf="@id/tv_explain"
         android:background="#43A047"
         android:text="var声明变量"
         android:layout_marginTop="20dp"
